@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSC193A Local Storage Assignment #10</title>
+</head>
+<body>
+  <h1>Local Storage Example</h1>
+  <input type="text" id="userText" placeholder="Enter something to remember:">
+  
+  <p id="output"></p>
+  
+  <button onclick="saveData()">Save Data</button>
+  <button onclick="retrieveData()">Retrieve Data</button>
+
+  <script>
+    // Function to save data to local storage
+    function saveData() {
+      var data = document.getElementById('userText').value;
+      localStorage.setItem('storedData', data);
+      alert("Data saved to local storage!");
+    }
+
+    // Function to retrieve data from local storage
+    function retrieveData() {
+      var data = localStorage.getItem('storedData');
+      if (data) {
+        document.getElementById('output').textContent = data;
+      } else {
+        alert("No data found in local storage!");
+      }
+    }
+  </script>
+</body>
+</html>
