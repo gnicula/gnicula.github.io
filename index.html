@@ -3,55 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriele Nicula - ML/Software Engineer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/images/favicon.ico">
+    <title>Nicula Labs</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #64748b;
+            --bg: #f8fafc;
+            --text: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        nav {
+            background: white;
+            padding: 1rem 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--secondary);
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hero {
+            padding: 6rem 0;
+            text-align: center;
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .projects {
+            padding: 4rem 0;
+        }
+
+        .projects h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .contact {
+            padding: 4rem 0;
+            background: white;
+            text-align: center;
+        }
+
+        .social-links {
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            margin: 0 1rem;
+            color: var(--secondary);
+            font-size: 1.5rem;
+            transition: color 0.2s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="home">
-        <h1>Gabriele Nicula</h1>
-        <p>ML/Software Engineer</p>
-        <a href="#projects" class="btn">Explore My Work</a>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <h3><a href="http://gaben.pythonanywhere.com/">Resume Improver</a></h3>
-            <p>AI-powered tool for personalized resume advice.</p>
+    <nav>
+        <div class="container">
+            <a href="#" class="nav-logo">Nicula Labs</a>
+            <div class="nav-links">
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="https://github.com/gnicula" target="_blank">GitHub</a>
+            </div>
         </div>
-        <!-- Repeat for other projects -->
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>ML Software Engineer</h1>
+            <p>Building innovative solutions in machine learning, computer vision, and automotive systems</p>
+        </div>
     </section>
 
-    <section id="resume">
-        <h2>Resume</h2>
-        <a href="assets/resume.pdf" class="btn" download>Download Resume</a>
-        <ul>
-            <li><strong>Programming Languages:</strong> C/C++, Java, Python...</li>
-            <!-- Add more resume points -->
-        </ul>
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Color Vision Deficiency Simulator</h3>
+                        <p>A tool that simulates how people with various types of color vision deficiency perceive colors, helping designers create more accessible content.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>AI Resume Analyzer</h3>
+                        <p>Leveraging Mixtral-7B to provide personalized resume improvement suggestions and career development plans based on job descriptions.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>License Plate Generator</h3>
+                        <p>An AI-powered tool that generates custom license plate designs based on user descriptions using advanced language models.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Computer Science graduate from CSU Sacramento specializing in ML engineering...</p>
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>Let's collaborate on innovative solutions</p>
+            <div class="social-links">
+                <a href="https://github.com/gnicula" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/gabriele-nicula" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:glnicula1@outlook.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
     </section>
-
-    <footer>
-        <p>© Gabriele Nicula 2024</p>
-        <a href="https://linkedin.com/in/gabriele-nicula-9847241aa">LinkedIn</a>
-        <a href="https://github.com/gnicula">GitHub</a>
-    </footer>
 </body>
 </html>
